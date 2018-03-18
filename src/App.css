@@ -1,0 +1,173 @@
+/* Styling */
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  color: #cacaca;
+}
+body {
+  background: #2a2a2a;
+  color: #8a8a8a;
+}
+
+/* Nav */
+.home-x {
+  list-style-type: none;
+}
+
+.nav {
+  text-align: center;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.nav li:hover {
+  transform: translateX(10px);
+}
+
+.active {
+  color: #cacaca;
+  font-weight: bold;
+}
+
+/* Main Text */
+
+.named,
+.job {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.named {
+  margin-top: 10%;
+  text-transform: uppercase;
+}
+
+/* Containment */
+
+.container {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.col-wrap {
+  width: 500px;
+}
+
+.col-wrap ul {
+  font-weight: bold;
+}
+
+.left,
+.langs {
+  width: 50%;
+  float: left;
+}
+
+.right,
+.skills {
+  width: 50%;
+  float: right;
+}
+
+/* About */
+blockquote {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  border: 5px groove #cacaca;
+}
+
+.langs li,
+.skills li {
+  font-size: 18px;
+}
+
+.afterbout {
+  display: inline-block;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  height: 0.5fr;
+  grid-template-columns: repeat(2, 400px);
+  justify-content: center;
+}
+
+.prj {
+  width: 100%;
+  border: 5px solid;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f0ee;
+  visibility: hidden;
+  opacity: 0;
+}
+.prj:hover {
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+
+.prj:hover .text {
+  opacity: 1;
+  visibility: visible;
+  color: #f2f0ee;
+  font-weight: 700;
+}
+/* Media Queries */
+@media screen and (max-width: 500px) {
+  .col-wrap {
+    width: 100%;
+  }
+
+  .left,
+  .right,
+  .langs,
+  .skills {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects {
+    display: grid;
+    grid-gap: 20px;
+    height: 0.5fr;
+    grid-template-columns: auto;
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .prj {
+    width: 100%;
+  }
+  .prj img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .skills {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .right,
+  .skills {
+    float: left;
+  }
+}
